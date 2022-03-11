@@ -18,7 +18,9 @@ class TaxiButton extends StatelessWidget {
       ),
       color: color,
       textColor: Colors.white,
-      onPressed: onPressed(),
+      onPressed: () {
+        onPressed();
+      },
       child: Container(
         height: 50,
         child: Center(

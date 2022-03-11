@@ -2,6 +2,7 @@
 
 import 'package:uber_clone/brand_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:uber_clone/screens/registrationpage.dart';
 import 'package:uber_clone/widgets/TaxiButton.dart';
 
 class LoginPage extends StatelessWidget {
@@ -33,7 +34,7 @@ class LoginPage extends StatelessWidget {
                 Text(
                   'Sign In as a Rider',
                   textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 25, fontFamily: 'Brand-bold'),
+                  style: TextStyle(fontSize: 25, fontFamily: 'Brand-Bold'),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(20.0),
@@ -44,8 +45,7 @@ class LoginPage extends StatelessWidget {
                         decoration: InputDecoration(
                           labelText: 'Email address',
                           labelStyle: TextStyle(
-                            fontSize: 14.0,
-                          ),
+                              fontSize: 14.0, fontFamily: 'Brand-Regular'),
                           hintStyle: TextStyle(
                             color: Colors.grey,
                             fontSize: 10,
@@ -62,6 +62,7 @@ class LoginPage extends StatelessWidget {
                           labelText: 'Password',
                           labelStyle: TextStyle(
                             fontSize: 14.0,
+                            fontFamily: 'Brand-Regular',
                           ),
                           hintStyle: TextStyle(
                             color: Colors.grey,
@@ -82,9 +83,12 @@ class LoginPage extends StatelessWidget {
                 TextButton(
                   onPressed: () {
                     Navigator.pushNamedAndRemoveUntil(
-                        context, LoginPage.id, (route) => false);
+                        context, RegistrationPage.id, (route) => false);
                   },
-                  child: Text('Don\'t have an account, sign up here'),
+                  child: Text(
+                    'Don\'t have an account, sign up here',
+                    style: TextStyle(fontFamily: 'Brand-Regular'),
+                  ),
                 ),
               ],
             ),
